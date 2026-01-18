@@ -292,7 +292,7 @@ $(document).ready(function () {
 <p>
 <button type="button" class="btn btn-default btn-workflowr btn-workflowr-report" data-toggle="collapse" data-target="#workflowr-report">
 <span class="glyphicon glyphicon-list" aria-hidden="true"></span>
-workflowr <span class="glyphicon glyphicon-exclamation-sign text-danger"
+workflowr <span class="glyphicon glyphicon-ok text-success"
 aria-hidden="true"></span>
 </button>
 </p>
@@ -303,8 +303,8 @@ aria-hidden="true"></span>
 </li>
 <li>
 <a data-toggle="tab" href="#checks"> Checks <span
-class="glyphicon glyphicon-exclamation-sign text-danger"
-aria-hidden="true"></span> </a>
+class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span>
+</a>
 </li>
 <li>
 <a data-toggle="tab" href="#versions">Past versions</a>
@@ -317,9 +317,9 @@ aria-hidden="true"></span> </a>
 </p>
 <p>
 <strong>Checks:</strong> <span
-class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> 1
+class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> 2
 <span class="glyphicon glyphicon-exclamation-sign text-danger"
-aria-hidden="true"></span> 1
+aria-hidden="true"></span> 0
 </p>
 <p>
 <strong>Knit directory:</strong> <code>projekt_2/</code> <span
@@ -342,36 +342,33 @@ versions</em> tab lists the development history.
 <div class="panel panel-default">
 <div class="panel-heading">
 <p class="panel-title">
-<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRMarkdownfilestronguncommittedchanges">
-<span class="glyphicon glyphicon-exclamation-sign text-danger"
-aria-hidden="true"></span> <strong>R Markdown file:</strong> uncommitted
-changes </a>
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRMarkdownfilestronguptodate">
+<span class="glyphicon glyphicon-ok text-success"
+aria-hidden="true"></span> <strong>R Markdown file:</strong> up-to-date
+</a>
 </p>
 </div>
-<div id="strongRMarkdownfilestronguncommittedchanges"
+<div id="strongRMarkdownfilestronguptodate"
 class="panel-collapse collapse">
 <div class="panel-body">
-<p>The R Markdown file has unstaged changes. To know which version of
-the R Markdown file created these results, you’ll want to first commit
-it to the Git repo. If you’re still working on the analysis, you can
-ignore this warning. When you’re finished, you can run
-<code>wflow_publish</code> to commit the R Markdown file and build the
-HTML.</p>
+<p>Great! Since the R Markdown file has been committed to the Git
+repository, you know the exact version of the code that produced these
+results.</p>
 </div>
 </div>
 </div>
 <div class="panel panel-default">
 <div class="panel-heading">
 <p class="panel-title">
-<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomMilva13projektzaliczeniowyProgramowanieRtree7b8c1346331f39ee14b3c5e07a78004f4d1498e9targetblank7b8c134a">
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomMilva13projektzaliczeniowypublictree482ced0cda436e41b5b8dc287119ed745db0e304targetblank482ced0a">
 <span class="glyphicon glyphicon-ok text-success"
 aria-hidden="true"></span> <strong>Repository version:</strong>
-<a href="https://github.com/Milva13/projekt_zaliczeniowy_Programowanie_R/tree/7b8c1346331f39ee14b3c5e07a78004f4d1498e9" target="_blank">7b8c134</a>
+<a href="https://github.com/Milva13/projekt_zaliczeniowy_public/tree/482ced0cda436e41b5b8dc287119ed745db0e304" target="_blank">482ced0</a>
 </a>
 </p>
 </div>
 <div
-id="strongRepositoryversionstrongahrefhttpsgithubcomMilva13projektzaliczeniowyProgramowanieRtree7b8c1346331f39ee14b3c5e07a78004f4d1498e9targetblank7b8c134a"
+id="strongRepositoryversionstrongahrefhttpsgithubcomMilva13projektzaliczeniowypublictree482ced0cda436e41b5b8dc287119ed745db0e304targetblank482ced0a"
 class="panel-collapse collapse">
 <div class="panel-body">
 <p>
@@ -381,7 +378,7 @@ reproducibility.
 </p>
 <p>
 The results in this page were generated with repository version
-<a href="https://github.com/Milva13/projekt_zaliczeniowy_Programowanie_R/tree/7b8c1346331f39ee14b3c5e07a78004f4d1498e9" target="_blank">7b8c134</a>.
+<a href="https://github.com/Milva13/projekt_zaliczeniowy_public/tree/482ced0cda436e41b5b8dc287119ed745db0e304" target="_blank">482ced0</a>.
 See the <em>Past versions</em> tab to see a history of the changes made
 to the R Markdown and HTML files.
 </p>
@@ -399,16 +396,6 @@ Ignored files:
     Ignored:    .RData
     Ignored:    .Rhistory
     Ignored:    .Rproj.user/
-
-Unstaged changes:
-    Modified:   _workflowr.yml
-    Modified:   analysis/_site.yml
-    Deleted:    analysis/about.Rmd
-    Modified:   analysis/analiza_danych.Rmd
-    Modified:   analysis/cv.Rmd
-    Modified:   analysis/index.Rmd
-    Deleted:    analysis/license.Rmd
-    Modified:   analysis/prezentacja.qmd
 
 </code></pre>
 <p>
@@ -454,10 +441,27 @@ Message
 <tbody>
 <tr>
 <td>
+Rmd
+</td>
+<td>
+<a href="https://github.com/Milva13/projekt_zaliczeniowy_public/blob/208d57a262eb758b8ed3f2a58f70824e32eabde2/analysis/index.Rmd" target="_blank">208d57a</a>
+</td>
+<td>
+Milva13
+</td>
+<td>
+2026-01-18
+</td>
+<td>
+Initial commit - clean data
+</td>
+</tr>
+<tr>
+<td>
 html
 </td>
 <td>
-<a href="https://rawcdn.githack.com/Milva13/projekt_zaliczeniowy_Programowanie_R/54267501447d5cb7fb9fe190ea2e4e567f76f617/docs/index.html" target="_blank">5426750</a>
+<a href="https://rawcdn.githack.com/Milva13/projekt_zaliczeniowy_public/208d57a262eb758b8ed3f2a58f70824e32eabde2/docs/index.html" target="_blank">208d57a</a>
 </td>
 <td>
 Milva13
@@ -466,41 +470,7 @@ Milva13
 2026-01-18
 </td>
 <td>
-Build site.
-</td>
-</tr>
-<tr>
-<td>
-Rmd
-</td>
-<td>
-<a href="https://github.com/Milva13/projekt_zaliczeniowy_Programowanie_R/blob/ea7aab654d7efdae1a906ba74a538cb6b9cec1f0/analysis/index.Rmd" target="_blank">ea7aab6</a>
-</td>
-<td>
-Milva13
-</td>
-<td>
-2026-01-18
-</td>
-<td>
-Aktualizacja strony i CV
-</td>
-</tr>
-<tr>
-<td>
-Rmd
-</td>
-<td>
-<a href="https://github.com/Milva13/projekt_zaliczeniowy_Programowanie_R/blob/8787fe1164c126a7960a6c055ec7fceb04ff50ea/analysis/index.Rmd" target="_blank">8787fe1</a>
-</td>
-<td>
-Milva13
-</td>
-<td>
-2026-01-17
-</td>
-<td>
-Start workflowr project.
+Initial commit - clean data
 </td>
 </tr>
 </tbody>
