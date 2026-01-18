@@ -1,0 +1,95 @@
+---
+title: "cv"
+output:
+  workflowr::wflow_html:
+    toc: false
+    css: styles.css
+editor_options:
+  chunk_output_type: console
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
+library(dplyr)
+library(knitr)
+```
+
+# **CV**
+::::: columns
+::: column
+## **Dane podstawowe**
+
+***Imię i nazwisko***: Maria Barring
+
+***Kierunek studiów***: Informatyka
+
+***Uczelnia***: Uniwersytet Przyrodniczy w Poznaniu
+
+***Email***: [email\@student.pl](mailto:email\@student.pl){.email}
+:::
+::: column
+<div class="cv-image">
+![ ](images/cv.png)
+</div>
+:::
+:::
+## **Wykształcenie**
+
+```{r}
+wyksztalcenie <- data.frame(
+  Lata = c("2023-obecnie", "2019-2023"),
+  Instytucja = c("Uniwersytet Przyrodniczy w Poznaniu", "IV Liceum Ogólnokształcące"),
+  Kierunek = c("Informatyka", "Profil matematyczno-fizyczny"),
+  Stopień = c("Studia inżynierskie", "Matura")
+)
+
+kable(wyksztalcenie, caption = "Historia edukacji")
+
+```
+
+## **Umiejętności**
+
+***Pakiet Microsoft Office***: Zaawansowany
+
+***Programowanie w językach***: Python, SQL, HTML/CSS
+
+***Narzędzia i Metodyki Reprodukowalne badania***: Workflowr, Quarto, Markdown
+
+***Analiza danych***: Czyszczenie danych, wizualizacja, raportowanie
+
+***Języki obce Angielski***: C1
+
+***Niemiecki***: A2
+
+***Prawo jazdy***: kat.B
+
+## **Mocne strony**
+
+-   Dobra komunikacja i praca zespołowa
+
+-   Rozwiązywanie problemów oraz diagnostyka usterek
+
+-   Szybka nauka i elastyczność
+
+## **Doświadczenie i projekty**
+
+- ***Praca***: Realizacja standardów sprzedażowych i wizerunkowych marki H&M, w tym aktywna obsługa klienta i dbanie o nienaganny wygląd sali sprzedażowej.
+
+-   ***Praktyka zawodowa***: *w firmie informatycznej* czerwiec-lipiec 2025
+
+-   ***Tworzenie stron internetowych***: WordPress, ASP.NET, Drupal.
+
+-   ***Udział w projekcie***: *HELPERS’ GENERATION*
+
+## **Certyfikaty**
+
++   ***Wyróżnienie w konkursie***: *"QL Future Hackathon Quantum & AI"*
+
++ ***Uczestnioctwo w konkursach międzynarodowych oraz ogólnopolskich***: HackYeah, Ideathon, DeepBioTech.
+
+
+## **Referencje**
+Dostępne na życzenie.
+
+## **Oświadczenie**
+Wyrażam zgodę na przetwarzanie moich danych osobowych zawartych w niniejszym CV dla potrzeb niezbędnych do realizacji procesu rekrutacji (zgodnie z ustawą z dnia 10 maja 2018 roku o ochronie danych osobowych (Dz. Ustaw z 2018, poz. 1000) oraz zgodnie z Rozporządzeniem Parlamentu Europejskiego i Rady (UE) 2016/679 z dnia 27 kwietnia 2016 r. w sprawie ochrony osób fizycznych w związku z przetwarzaniem danych osobowych i w sprawie swobodnego przepływu takich danych oraz uchylenia dyrektywy 95/46/WE (RODO)).

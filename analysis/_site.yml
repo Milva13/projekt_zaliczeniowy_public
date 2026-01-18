@@ -1,0 +1,22 @@
+name: "moja-strona"
+output_dir: ../docs
+navbar:
+  title: "Moja Strona"
+  left:
+    - text: "Home"
+      href: index.html
+    - text: "CV"
+      href: cv.html
+    - text: "Analiza danych w R"
+      href: analiza_danych.html
+    - text: "Prezentacja"
+      href: prezentacja.html
+  right:
+    - icon: fa-github
+      href: https://github.com
+output:
+  workflowr::wflow_html:
+    toc: yes
+    toc_float: yes
+    theme: cosmo
+    highlight: textmate

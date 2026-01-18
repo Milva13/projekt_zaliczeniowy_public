@@ -1,0 +1,12 @@
+.small-image img {
+  border: 2px solid #ddd;
+  border-radius: 8px;
+}
+div.column{
+  padding: 10px;
+}
+.cv-image img {
+  border: 2px solid #57a7bd;
+  border-radius: 8px;
+  max-width: 65%;
+}

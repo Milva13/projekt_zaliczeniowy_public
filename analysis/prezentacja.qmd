@@ -1,0 +1,214 @@
+---
+title: "Moje pasje"
+subtitle: "Od introwertyka do starosty na studiach..."
+format:
+  revealjs:
+    theme: league
+    include-in-header:
+      text: |
+        <style>
+          .reveal h1 { font-size: 60px !important; }
+          .reveal h2 { font-size: 40px !important; }
+          .reveal p { font-size: 24px !important; }
+        </style>
+    smaller: true
+    margin-left: '3rem'
+    slide-number: true
+    show-slide-number: all
+    navigation-mode: linear
+    embed-resources: true 
+    toc: false
+    toc-depth: 1
+    incremental: false
+    scrollable: true
+    transition: fade
+    pdf-max-pages-per-slide: 1
+    code-block-bg: true
+    highlight-style: arrow
+    progress: true
+    footer: "Prezentacja Quarto | [Home](index.html)"
+    margin: 0.1
+    revealOptions:
+      width: 1280
+      height: 720
+    menu:
+      side: left
+      width: wide
+engine: knitr
+---
+
+
+```{r setup, include=FALSE}
+# Ładowanie niezbędnych bibliotek
+library(ggplot2)
+library(dplyr)
+
+# Ustawienia globalne dla wykresów
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
+```
+
+# O mnie: Introwertyczny i ekstrawertyk
+
+Jestem osobą, która najbardziej ceni sobie własne towarzystwo lub czas
+spędzony w zaufanym gronie.
+
+**Moja natura**: Typowa introwertyczka.
+
+**Paradoks**: W sytuacjach stresowych potrafię przybrać maskę
+ekstrawertyka.
+
+*Gdzie czuję się najlepiej?*
+
+-   W domu z dobrą książką.
+-   Przy komputerze w świecie RPG.
+-   Słuchając mrocznych opowieści.
+
+# Świat True Crime – Podcasty
+
+Uwielbiam analizować mroczne zakamarki ludzkiej psychiki. Moja lista
+ulubionych twórców to fundament każdego wieczoru.
+
+**Czego słucham najczęściej?**
+
+1.  Kryminatorium (klasyka gatunku)
+
+2.  Piąte, nie zabijaj (Justyna Mazur)
+
+3.  Olga Herring (seria True Crime)
+
+4.  RMF FM: Sceny zbrodni oraz Dorwać Bestię
+
+5.  MysteryTV: Straszne historie na dobranoc.
+
+## Analiza słuchalności podcastów Uzasadnienie:
+
+Wykres przedstawia mój subiektywny "wskaźnik zainteresowania" danymi
+seriami, co pokazuje, jak bardzo angażuję się w poszczególne produkcje.
+
+```{r}
+# Tworzenie danych o zainteresowaniu podcastami
+podcasty <- data.frame(
+  Nazwa = c("Kryminatorium", "Piąte, nie zabijaj", "Olga Herring", "MysteryTV", "RMF (Sceny Zbrodni/Dorwać Bestię)"),
+  Poziom_Uwagi = c(95,75, 85, 80,90 )
+)
+
+# Wizualizacja przy użyciu ggplot2
+ggplot(podcasty, aes(x = reorder(Nazwa, Poziom_Uwagi), y = Poziom_Uwagi, fill = Nazwa)) +
+  geom_bar(stat = "identity", alpha = 0.8) +
+  coord_flip() +
+  labs(title = "Mój ranking zaangażowania w podcasty",
+       x = "Podcast", y = "Poziom uwagi (%)") +
+  theme_minimal() +
+  scale_fill_viridis_d(option = "magma") +
+  theme(legend.position = "none")
+```
+
+# Gry RPG: Ucieczka do Innych Światów
+
+Gry fabularne to dla mnie sposób na przeżywanie niesamowitych przygód.
+
+-   **Wiedźmin**: Za klimat i słowiańskość.
+-   **The Elder Scrolls**: Za nieskończoną wolność eksploracji.
+-   **Where Winds Meet**: Moje najnowsze zainteresowanie światem
+    open-world.
+
+![Wiedźmin](images/wiedzmin.jpg)
+
+# Gry MMORPG: Albion Online
+
+Mimo introwertyzmu, w świecie gier MMO odnajduję radość z interakcji
+społecznej.
+
+-   Przynależność do Gildii: To jedyny "eksces" towarzyski, który
+    sprawia mi czystą przyjemność.
+
+-   Events: Wspólne wyprawy i walki o terytoria dają poczucie wspólnoty
+    bez presji świata rzeczywistego.
+
+![Albion Online](images/albionOnline.png)
+
+# Literatura Fantasy i Young Adult
+
+Książki to moja największa pasja. Uwielbiam serie, które budują
+rozbudowane uniwersa. *O to kilka z nich*:
+
+| **Seria**                          | **Autor**    |
+|------------------------------------|--------------|
+| Wiedźmin                           | A. Sapkowski |
+| Percy Jackson i Bogowie Olimpijscy | R. Riordan   |
+| Diabelskie Maszyny                 | C. Clare     |
+| Szklany Tron                       | S.J. Maas    |
+
+
+
+# Kultura Japonii: Anime i Manga
+
+Interesuje mnie estetyka i sposób opowiadania historii w Japonii.
+Doceniam każdą scenę, która ukazuje kulturę i porusza ważne problemy
+społeczne, kulturowe lub moralne.
+
+**Ulubiony gatunek**: *Isekai* (przeniesienie bohatera do innego świata
+– idealne dla marzycieli!).
+
+**Co ceni?** *Kreatywność* w tworzeniu zasad magii i technologii.
+
+```{r}
+# Ładowanie biblioteki
+library(ggplot2)
+library(dplyr)
+
+# 1. Przygotowanie danych
+anime_data <- data.frame(
+  Tytul = c("Solo Leveling", "Tougen Anki", "Tokyo Ghoul", "Sword Art Online"),
+  Odcinki = c(25, 12, 48, 96)
+)
+
+# 2. Tworzenie wykresu
+ggplot(anime_data, aes(x = reorder(Tytul, -Odcinki), y = Odcinki, fill = Tytul)) +
+  geom_bar(stat = "identity", color = "black", alpha = 0.8) +
+  geom_text(aes(label = Odcinki), vjust = -0.5, fontface = "bold") +
+  # Uzasadnienie estetyki: kolory dopasowane do klimatu anime (ciemniejsze barwy)
+  scale_fill_manual(values = c(
+    "Solo Leveling" = "#51208A",
+    "Tougen Anki" = "#570808",
+    "Tokyo Ghoul" = "#302222",
+    "Sword Art Online" = "#2E90B0"
+  )) +
+  labs(
+    title = "Ilość odcinków wybranych serii anime",
+    subtitle = "Porównanie długości serii",
+    x = "Tytuł Anime",
+    y = "Liczba odcinków",
+    caption = "Dane poglądowe na potrzeby prezentacji"
+  ) +
+  theme_minimal() +
+  theme(
+    legend.position = "none",
+    plot.title = element_text(face = "bold", size = 14),
+    axis.text.x = element_text(size = 11)
+  )
+```
+
+# Tak na koniec...
+
+Pomimo moich "mrocznych" zainteresowań, jestem osobą ciepłą i uczuciową.
+Otaczam się wspaniałymi przyjaciółmi, z którymi mogę się rozwijać i
+dzielić swoimi zainteresowaniami.
+
+::: {.callout-tip title="Ciekawostka"}
+Prawdpodobnie przez moje "poczucie odpowiedzialności" zostałam wybrana
+na satrostę roku na studiach.
+:::
+
+# Dziękuję za uwagę!
+
+::::: columns
+::: column
+![ ](images/whereWindsMeet1.png)
+:::
+
+::: column
+![ ](images/whereWindsMeet2.png)
+:::
+zdjęcia są z gry Where Winds Meet
+:::::

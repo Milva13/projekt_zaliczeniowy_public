@@ -1,0 +1,48 @@
+---
+title: "Home"
+site: workflowr::wflow_site
+output:
+  workflowr::wflow_html:
+    toc: false
+    css: styles.css
+editor_options:
+  chunk_output_type: console
+---
+
+## **Kim jestem?**
+
+Nazywam się **Milva13**, jestem studentką **Informatyki** na **Uniwersytecie Przyrodniczym**.
+
+## **Moja uczelnia**
+
+::::: columns
+::: column
+<div class="small-image">
+![ ](images/UP_Poznan.jpg)
+</div>
+:::
+::: column
+*Główny budynek Uniwersytetu Przyrodniczego w Poznaniu*
+
+**Adres:** Wojska Polskiego 28, 60-637 Poznań
+:::
+:::
+
+## **O stronie**
+
+Ta strona internetowa została wykonana przy użyciu pakietu **workflowr** w R jako projekt zaliczeniowy z przedmiotu "Programowanie w R".
+
+Celem projektu jest demonstracja umiejętności:
+
+-   tworzenia reprodukowalnych analiz,
+
+-   generowania stron internetowych z R,
+
+-   wizualizacji danych,
+
+-   tworzenia prezentacji w Quarto.
+
+## **Kontakt**
+
+-   Email: [email\@student.pl](mailto:email\@student.pl){.email}
+-   GitHub: [github.com/Milva13](https://github.com)
